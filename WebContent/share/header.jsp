@@ -15,9 +15,6 @@
 <input type="button" value="搜索" class="search_btn" onclick="checkSearchInput();"/>
 </form>
 </div>
-<p class="search_help">
-<a href="#">高级搜索</a>&nbsp;&nbsp;热搜：<a href="#">沉默的羔羊</a>&nbsp;&nbsp;<a href="#">德州电锯杀人狂</a>&nbsp;&nbsp;<a href="#">人间失格</a>&nbsp;&nbsp;<a href="#">人生</a>&nbsp;&nbsp;<a href="#">兄弟</a>
-</p>
 </div>
 <script>
 function checkSearchInput(){

@@ -9,15 +9,10 @@
 <li class="tools_myBook"><a href="#">我的图书</a>
 <ul class="nav2"><li><a href="/uushop/user/getHavePayOrder.do">已经购买</a></li><li><a href="/uushop/user/book_getCollect.do">我的收藏</a></li></ul>
 </li>
-<!-- 
-<li><a href="#">自助服务</a></li>
-<li><a href="#">投诉与建议</a></li>
-<li><a href="#">优优服务</a></li>
- -->
-<li class="tools_right_last"><a href="javascript:;"  onclick="window.external.addFavorite('http://localhost/uushop','优优图书商城')">加入收藏</a></li>
+
 </ul>
 <p class="tools_left">
-欢迎来到优优商城&nbsp;&nbsp;
+欢迎来到图书商城&nbsp;&nbsp;
 <s:if test="#session.user==null">
 <a href="${pageContext.request.contextPath}/user/login.jsp">登录</a>&nbsp;&nbsp;<a href="${pageContext.request.contextPath}/user/register.jsp">免费注册</a>
 </s:if>
@@ -33,8 +28,8 @@
 
 
 <div class="logo_content">
-<a href="${pageContext.request.contextPath}/index.jsp" class="logo_bg"><img src="/uushop/images/logo.png" /></a>
-<a href="#" class="adv_b1"><img src="/uushop/images/a1.png" /></a>
+<a href="${pageContext.request.contextPath}/index.jsp" class="logo_bg"><img src="/ecommerce/images/logo.png" /></a>
+<a href="#" class="adv_b1"><img src="/ecommerce/images/a1.png" /></a>
 </div>
 
 <div class="nav_all">

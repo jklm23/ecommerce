@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.velocity.app.Velocity;
 
-public class EncodeFilter implements Filter {
+public class EncodFilter implements Filter {
        private FilterConfig filterConfig;
        private String encoding=null;
 	@Override
