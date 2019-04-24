@@ -27,6 +27,15 @@
 		</global-results>
 		<action name="IndexAction" class="indexAction">
 		</action>
+		
+		<action name="book_*" class="bookAction" method="{1}">
+			<result name="success">${nextPage}</result>
+			<result name="error" >${nextPage}</result>
+			<result name="input" >/admin/message.jsp</result>
+			<result name="toCollectBookPage" >/user/mycollectbook.jsp</result>
+			<result type="redirectAction" name="toAction">${nextPage}</result>
+		</action>
+		
 		<action name="bookType_*" class="bookTypeAction" method="{1}">
 			<result name="success">/admin/index.jsp</result>
 		</action>
