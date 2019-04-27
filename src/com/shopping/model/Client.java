@@ -6,10 +6,10 @@ import java.io.Serializable;
  * 用户实体
  */
 public class Client implements Serializable {
-	private int cno;// 编号
+	private int cno;// 用户id
 	private String cname;// 用户名
 	private String cpassword;// 用户密码
-	private String cclass;// 用户类型
+	private String cclass;// 用户类型：管理员 or 普通用户
 	private String csex;// 性别
 	private int cage;// 年龄
 	private String cphone;// 用户电话
@@ -32,7 +32,7 @@ public class Client implements Serializable {
 		this.caddress = caddress;
 	}
 
-	/*getters and setters*/
+	/* getters and setters */
 	public int getCno() {
 		return cno;
 	}

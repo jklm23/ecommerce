@@ -4,10 +4,11 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="com.shopping.model">
-    
+    <!-- class对应java实体类，table对应数据库中的表 -->
     <class name="Client" table="client">
     	
     	<id name="cno" column="cno">
+    	<!-- 主键(id)自增 -->
     		<generator class="increment"></generator>
     	</id>
     	<property name="cname" column="cname"></property>
