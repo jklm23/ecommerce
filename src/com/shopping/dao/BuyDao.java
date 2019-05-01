@@ -31,27 +31,27 @@ public interface BuyDao {
 	public List<Buy> getAll();
 
 	/**
-	 * 根据cno,获取所有订单数据
+	 * 根据cno（用户编号）,获取订单数据
 	 */
 	public List<Buy> getAllByCno(int cno);
 
 	/**
-	 * 根据sno,获取所有订单数据
+	 * 根据sno（商品编号）,获取订单数据
 	 */
 	public List<Buy> getAllBySno(int sno);
 
 	/**
-	 * 根据buystate(购买状态),获取所有订单数据
+	 * 根据buystate(购买状态)获取订单数据
 	 */
 	public List<Buy> getAllByBuystate(String buystate);
 
 	/**
-	 * 根据shipment(出货状态),获取所有订单数据
+	 * 根据shipment(出货状态)获取订单数据
 	 */
 	public List<Buy> getAllByShipment(String shipment);
 
 	/**
-	 * 根据bno(订单编号),获取所有订单数据
+	 * 根据bno(订单编号)获取订单数据
 	 */
 	public List<Buy> getAllByBno(String bno);
 
