@@ -159,7 +159,7 @@
 	    	</result>
 	    </action>
 	    
-	    <!-- 用户登陆 -->
+	    <!-- 用户登录 -->
 	   	 <action name="clientlogin" class="clientAction" method="clientlogin">
 	    	<result name="client">
 	    		/index.jsp;

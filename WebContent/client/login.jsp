@@ -28,7 +28,7 @@ input {
 <body style="background-color: #F5FFFA">
 	<div class="container" style="margin-top: 10%; width: 450px;">
 	<!-- dsafsdfasfd -->
-		<form action="/ssh_project/user/clientlogin" method="post"
+		<form action="/ecommerce/user/clientlogin" method="post"
 			class="form-signin" role="form">
 			<h3 align="center">欢迎登录商城</h3>
 			<%
@@ -40,8 +40,8 @@ input {
 				autofocus name="cname"> <input type="password"
 				class="form-control" placeholder="密码" required name="cpassword">
 			<input type="submit" value="提交" class="btn btn-primary container">
-			<a href="/ssh_project/client/addclient.jsp">新用户注册</a>&nbsp;&nbsp;<a
-				href="/ssh_project/index.jsp">商城首页</a>
+			<a href="/ecommerce/client/addclient.jsp">新用户注册</a>&nbsp;&nbsp;<a
+				href="/ecommerce/index.jsp">商城首页</a>
 		</form>
 	</div>
 

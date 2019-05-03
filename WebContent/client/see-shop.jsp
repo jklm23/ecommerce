@@ -34,10 +34,10 @@
    			Client client=(Client)session.getAttribute("client");
    			cno=client.getCno();
    %>
-   <a class="navbar-brand text-info" href="/ssh_project/user/findoneclient?cno=<%=client.getCno()%>"><%=client.getCname() %></a>
-   <a class="navbar-brand" href="/ssh_project/client/login.jsp" style="font-size: 18px;">注销</a>
+   <a class="navbar-brand text-info" href="/ecommerce/user/findoneclient?cno=<%=client.getCno()%>"><%=client.getCname() %></a>
+   <a class="navbar-brand" href="/ecommerce/client/login.jsp" style="font-size: 18px;">注销</a>
    <% }else{ %>
-  <a class="navbar-brand" href="/ssh_project/client/login.jsp">注册/登录</a>
+  <a class="navbar-brand" href="/ecommerce/client/login.jsp">注册/登录</a>
   <% } %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -46,14 +46,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ssh_project/index.jsp">商城首页<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/ecommerce/index.jsp">商城首页<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/ssh_project/user/seeshoppingcar?cno=<%=cno%>&value=buycar">购物车</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">我的购物车</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/ssh_project/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">我的订单</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -138,8 +138,8 @@
 		<% if(cno==0){
 		%>
 		<h3 class="text-danger">购买请登录</h3><% }else{ %>
-		<button class="btn btn-danger" onclick="doAction('/ssh_project/user/addshoppingcar')">添加到购物车</button>&nbsp;
-		<button class="btn btn-primary" onclick="doAction('/ssh_project/user/paybuy')">支付</button>
+		<button class="btn btn-danger" onclick="doAction('/ecommerce/user/addshoppingcar')">添加到购物车</button>&nbsp;
+		<button class="btn btn-primary" onclick="doAction('/ecommerce/user/paybuy')">支付</button>
 		<% } %>
 		</td></tr>
 		</table>

@@ -21,9 +21,9 @@
    			cno=client.getCno();
    %>
    <a class="navbar-brand text-info" href="#"><%=client.getCname() %></a>
-   <a class="navbar-brand" href="/ssh_project/client/login.jsp" style="font-size: 18px;">注销</a>
+   <a class="navbar-brand" href="/ecommerce/client/login.jsp" style="font-size: 18px;">注销</a>
    <% }else{ %>
-  <a class="navbar-brand" href="/ssh_project/client/login.jsp">注册/登录</a>
+  <a class="navbar-brand" href="/ecommerce/client/login.jsp">注册/登录</a>
   <% } %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,14 +32,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ssh_project/index.jsp">商城首页<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/ecommerce/index.jsp">商城首页<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ssh_project/user/seeshoppingcar?cno=<%=cno%>&value=buycar">购物车</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">购物车</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/ssh_project/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -53,22 +53,22 @@
 	<% Shop shop=(Shop)request.getAttribute("shop");%>
 	<div class="container" style="margin-top: 4%;width: 550px;">
 		<div class="card">
-		  <form name=alipayment action="/ssh_project/pay/alipay.trade.page.pay.jsp" method=post>
+		  <form name=alipayment action="/ecommerce/pay/alipay.trade.page.pay.jsp" method=post>
 		  	<table class="table">
 		  		<thead>
 		  			<tr><th class="alert alert-primary" role="alert" colspan="2">支付</th></tr>
 		  		</thead>
 		  		<tr>
 		  			<td align="right">商品订单号 ：</td>
-		  			<td><input id="WIDout_trade_no" name="WIDout_trade_no"/></td>
+		  			<td><input id="WIDout_trade_no" name="WIDout_trade_no"  value="readonly"/></td>
 		  		</tr>
 		  		<tr>
 		  			<td align="right">商品名称 ：</td>
-		  			<td><input name="WIDsubject" type="text" value="<%=shop.getShopname()%>"/></td>
+		  			<td><input name="WIDsubject" type="text" value="<%=shop.getShopname()%>"  value="readonly"/></td>
 		  		</tr>
 		  		<tr>
 		  			<td align="right">付款金额 ：</td>
-		  			<td><input name="WIDtotal_amount" type="text" value="<%=buy.getPrice()%>"/></td>
+		  			<td><input name="WIDtotal_amount" type="text" value="<%=buy.getPrice()%>"  value="readonly"/></td>
 		  		</tr>
 		  		<tr>
 		  			<td align="right">商品描述：</td>
@@ -116,7 +116,6 @@
 		sNow += String(vNow.getSeconds());
 		sNow += String(vNow.getMilliseconds());
 		document.getElementById("WIDout_trade_no").value =  sNow;
-		//document.getElementById("WIDsubject").value = "腾";
 		document.getElementById("WIDtotal_amount").value = "12999";
 	}
 	GetDateNow();

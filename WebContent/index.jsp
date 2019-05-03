@@ -7,6 +7,6 @@
 <title>首页跳转页面</title>
 </head>
 <body>
-	<% response.sendRedirect("/ssh_project/user/findindexshop"); %>
+	<% response.sendRedirect("/ecommerce/user/findindexshop"); %>
 </body>
 </html>
