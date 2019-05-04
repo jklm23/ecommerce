@@ -8,11 +8,35 @@ public class AlipayConfig {
 //↓↓↓↓↓↓↓↓↓↓请在这里配置您的基本信息↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
 	// 应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
-	public static String app_id = "2016092300577362";
+	public static String app_id = "2016092800613555";
 	
 	// 商户私钥，您的PKCS8格式RSA2私钥
-    public static String merchant_private_key = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCInhoTk33mxkyLDZ3zLhjriV/Lsz9RdEwkmaG9sO1Dky3YWFF8obfYHofZE8wFaGKc1LxUgUE8n+iVA0Lc0+TeSVwSkGXFCXRaOtIbD+Y5kTGuAHxmQyVXhXoJgGqpqqIuGGY4Ds31FNRC8WCtR0b0zguZ2kfoibBTEMgaX7ZYmickOZyP0H36NT/iHstNUGigp/GK7jyPT4d9bipFxigAC1ziVUWUHOgs1rTgsBKcTpHqo3Pb8DEl1TTAMcEg6rLu6L1jwux4T3uqctTxD0e47L/Laq1YmlXG4QYcA1QWj+hQ0iOv+zpymIsIClgyoYNpSxABj4BpGHYZtW8yaPyLAgMBAAECggEAUVBA1wv/cL7wSgdlzprOTEqskNJ0Smf89f/XC89luMW+ELmobpTWlrS9SJAG6+UQZKYeHfH8wTewOBkDz+nym/dv7MCzQg55iUbfTSoubm8j8ZvqbvdiH3CbjVI4qhmcg/ETziPJpCismdePIjN9YTHOJ9mK2TYyk442e7QiFSNylVjvCO3odsBZfiXxE14wkOMKmo77m8rWGYj3PuLuYTNWNnJl2lni68HDGc26wDs4h+rggOUJR8F+ng2PUUPGKrVYaETglSiZW69yUgqf6RgCUYRuO7TLmxq6sVcT4OJDRq7cyMN8VqENSVZcsDe/gYdPrGpV9gcvvFDdxKYwGQKBgQDWi1atgKVPtEIELe3CdCH4OXxh8doHe/6zLMZOhLXxCzL0LyFOWhJ9o8Vtu/8wRxvctV+h6EnYfBxa6BH1DCn+xFAjyK5/EeW2Fkz4U6H8UBoFctTZ6s7udFFvdxJYbuL+5fdoQDa7iZaGaHkEASt2Pu33Z+XXPHRI40xKiEXJ5wKBgQCjBAkzIXx1wkQqZOiXbrPo4noaUIdM3GhK4o4+qIy2K9ngWaDRAYJl01lH2t9OfXSKxyE7ElWgtk3/XhDWfbMrDqJ5+ZqOB9p122PFEg6ZM5/m5Edcd+oVTmkyWWdRU+EL7qMVAoTz7Scw5ptqeiLXiAz0dBVXw/Yx7ZCbBFoLvQKBgFYuhtUPdlh8GoC/SmDwcazausJFesXC419qPwbPfJ6lVwSL4h8tQ3xAy0/3Ut07009ndFD/lJpn0KQb0QrUphH3HhIhzSayM8pfTu/5+Hn4W1uQ8zvOfO2AwC28cRwg/wJRsn6oPNQ8wsCfOu2G4sSPJtxZWhSJ7lRRKhZOg2pFAoGAJFzzHGe81pvWDsrho137XdifOh16gOetj/7HkiyQ7tYLTONRXy4CA2rIwKGPLHgJtidDP2UQmr/v2CYIhYAWpmUmUyUdl88iqSWeNMiZXw1H/v4u+O561fPevW95/4dBbSL3V+lu9OaS1nKqem7yNLfRg/odBK3ezjZbCmlHGNUCgYEAysGkKa5ehqpU0moXkBNn3KIsRs5nw8Kq45QvKXpe/IQnzHp3PJUl5r8UUqZlyAp33gza/DCkvUR9zPW+V9dKSgKtkFo/pNPvv9CVRz5eqaez3GrDeg2dg09SM4rrdK2SlSE3wh2GsW6UTAYj40m+OI9v+BIHVqVKsxtnepo4qlY=";
-	
+    public static String merchant_private_key = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCatAu7wX0lKSS/\n" + 
+    		"+AlVSuoaTopOgbmjiL5xFbpUgbjI0cKUsjCJSAiv37IGIJobeXqSyLL1hxgPPM1w\n" + 
+    		"MkxPCDlFmEom591kI4FpjR07zbiIxcjTYgxGAwES5+c/8S141NgtqGgvFScC/l0g\n" + 
+    		"EQERfkRBmCj5/1pkXZEeoaGlXQ6nFfWJvl6fpPnc73XrHx4BK0T/YWpoZjiK0TgW\n" + 
+    		"Qi4ih/Su4Et1cKMUw4216Aqg4HrprfOBoGo2ysPobX92eIfuNd7J/TzKWOcN/0Hn\n" + 
+    		"b96Z9WIqNY5UtRV+F0P0NBnhs9WQGm8I0+Hxuy9fykBybHD4wt/8DEV/ECL5uLcb\n" + 
+    		"a9BUKYBfAgMBAAECggEAVM60y/XTPAblDZPU0fwif89khIsbEGpLNEUcA22ltfk/\n" + 
+    		"uTJB51Ak6v0vY6qFsOAUcNkzOeQYLWpAmOwJ5x10ABHvPIrJVDcen5VrXDh3nAsI\n" + 
+    		"/9B1OAA3m3yjyerV6bKM2+LBUmY/H6X/uS95LXTRyD+43uu8St78ShWDPtrXyIIn\n" + 
+    		"/Lfobz49xyDloHYXUUYcGvG9w/93XXqA6zc4I774sj2dQ+vIKc1QCriV2krowYo2\n" + 
+    		"5JM2mCmzo6CUlXJo6RzS55gOUPeFVtEutKjRdzJCj4Kcb5Gp8NadSBXsR/VnSsz/\n" + 
+    		"4CE9It3f7088n2icbDgwaqhiFa1dok/3NUhl3tCmiQKBgQDLbh5WAV+Yj52KFbAA\n" + 
+    		"132EKXqcHfhcqMZ2Q9EXDjyc1vznuZ0cOKoxtTFg6/4j03cyKf01Do48M6nlT++w\n" + 
+    		"DGdYYO/OjxzCLJKvJoGWA4+xpPNJddvtCAerIYOvBKH1VXVEyoVKjJeH7di4oXKl\n" + 
+    		"2ORJpCDK7VCrON579kbmdX6UWwKBgQDCrmmUPELg/UuPUe0855JlQelzk7w5JlsP\n" + 
+    		"MYC8QABvpCPkx+kwGhaJ7UGbdNHmswFCtVhS7NJIQ9C0XYIfEAvgQOoaSsi42Pgw\n" + 
+    		"ENVFnbPv4fYPwVrYw+zSyNGbDfe5KlGFNujsCB9EIoVQrJOkgyVC3Ij6FK8a88vD\n" + 
+    		"Lzyeg/ZzTQKBgHrqCC5TGh2l+LwsKnH3wgEOxuR5P01NNMzUYQubMIhbZeflQMaC\n" + 
+    		"fmMWZcV4EdA3vzdyI2nhZ5N8a9UAHYSzmeXOfFbEJc40/FQT4gxwDmx5i/4A1mc7\n" + 
+    		"iNafo18mX21Ku1ZbP3oxxIT+8wlrk0gd6qGMJ7w0857g95zSyzgIGfktAoGAcfci\n" + 
+    		"DUn9qLH+8qZ2J8o0VBxyqlsYu6ftdIZ5IzqgRrqi3IH+y07qVNHUL0oCunedzExW\n" + 
+    		"qSzDqNQyL/PxgXemTCAUK1IOEM/K8nBYOUmplUsE/ZImOXDwiTBQK+HQW9AfKsnL\n" + 
+    		"LqlOjFddDa4JPCwduvdZJHTJURDY/qj/Zpg/xJ0CgYEAoJsieNqA3/Cgr20mgKQC\n" + 
+    		"HY+WhZ2Krhb2pC82r46sog0Z/1ACTzCGe03sUQibcjUaXO9uwydkofW7ys5FEqIF\n" + 
+    		"t+SbYpHvUcxy4wi0Y/P8GBVgz/gN8TYYEVyFcM6GNDjzqoS8qFDRk32yBU7q87CF\n" + 
+    		"JcIKYItYPb2zoI+CHFG25eA=";
 	// 支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
     public static String alipay_public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxZAJU9+VqDmqDqewj/wU5wf8oaErYBSU4mjnGpcSzAJpVRSSAqGhqjeD9X2ek6dmdoj8AqT6h2Su+qJ2/HvPWfcljne3xtMEV30MilbNh5jWDR8fs3PGQSfco35MA2kM4oC2UvNHP2t41UGB5LToRQx1889omUDfx0pRnGgELfSkoeFP1588ozEkTfmK793yu5/Ha/TolueDxEr3Jb2PiKZf/Q5GeMndpi4A5V648wtRcjfmB2TZaFNemPFvNkYDVutWa1K96rcULqjbLcGx7Fjx88wkfhjnr9sexsqipwBk6OCTTUYfUycTwQG4/TRZVGJN9rRl/tcM5iwXzsd9BQIDAQAB";
 

@@ -42,7 +42,7 @@
 	
 		//付款金额
 		String total_amount = new String(request.getParameter("total_amount").getBytes("ISO-8859-1"),"UTF-8");
-		response.sendRedirect("/ssh_project/user/updatepaybuy?out_trade_no="+out_trade_no);
+		response.sendRedirect("/ecommerce/user/updatepaybuy?out_trade_no="+out_trade_no);
 	}else {
 		out.println("验签失败");
 	}

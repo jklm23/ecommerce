@@ -158,6 +158,9 @@ public class BuyAction extends ActionSupport{
 			HttpServletRequest request=ServletActionContext.getRequest();
 			HttpSession session=request.getSession();
 			buy=(Buy)session.getAttribute("paybuy");
+			if(buy==null) {
+				System.out.println("*************");
+			}
 			buy.setBuystate("已支付");
 			buy.setBno(out_trade_no);
 			buy.setDate(new Date());

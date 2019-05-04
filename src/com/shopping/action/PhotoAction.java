@@ -25,7 +25,7 @@ public class PhotoAction extends ActionSupport{
 		private String shopname;//商品名
 		private String pname;//图片名
 		private List<Photo> list;
-		private String imagepath="D:\\新建文件夹\\ssh_project\\WebContent\\image";
+		private String imagepath="E:\\java-workbench\\ruanjiangongcheng\\ecommerce\\WebContentimage";
 		/**
 		 * 上传一件商品的一张或多张图片	
 		 */
