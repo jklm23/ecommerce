@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.shopping.common.EncryptionByMD5;
 import com.shopping.model.Client;
 import com.shopping.service.ClientService;
 
@@ -78,7 +79,7 @@ public class ClientAction extends ActionSupport {
 			act.getSession().put("client", client);
 			return "client";
 		}
-		this.setKey("登陆失败");
+		this.setKey("登录失败");
 		return "loginfalse";
 	}
 
@@ -86,9 +87,11 @@ public class ClientAction extends ActionSupport {
 	 * 添加一条用户记录
 	 */
 	public String addclient() throws Exception {
+		EncryptionByMD5 eb=new EncryptionByMD5();
 		Client client = new Client();
 		client.setCname(cname);
-		client.setCpassword(cpassword);
+		client.setCpassword(eb.getMD5(cpassword.getBytes()));
+		System.out.println("**************"+eb.getMD5(cpassword.getBytes()));
 		client.setCclass("用户");
 		client.setCage(cage);
 		client.setCsex(csex);

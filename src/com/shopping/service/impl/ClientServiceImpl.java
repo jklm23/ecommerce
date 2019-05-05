@@ -2,6 +2,7 @@ package com.shopping.service.impl;
 
 import java.util.List;
 
+import com.shopping.common.EncryptionByMD5;
 import com.shopping.dao.ClientDao;
 import com.shopping.model.Client;
 import com.shopping.service.ClientService;
@@ -54,7 +55,8 @@ public class ClientServiceImpl implements ClientService{
 
 	@Override
 	public Client login(String cname, String password) {
-		return clientDao.login(cname, password);
+		EncryptionByMD5 eb=new EncryptionByMD5();
+		return clientDao.login(cname, eb.getMD5(password.getBytes()));
 	}
 
 	@Override

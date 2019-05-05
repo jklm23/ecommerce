@@ -29,10 +29,14 @@
    			Client client=(Client)session.getAttribute("client");
    			cno=client.getCno();
    %>
-   <a class="navbar-brand text-info" href="/ecommerce/user/findoneclient?cno=<%=client.getCno()%>"><%=client.getCname() %></a>
-   <a class="navbar-brand" href="/ecommerce/client/login.jsp" style="font-size: 18px;">注销</a>
-   <% }else{ %>
-  <a class="navbar-brand" href="/ecommerce/client/login.jsp">注册/登录</a>
+   <a class="navbar-brand text-info" href="/ssh_project/user/findoneclient?cno=<%=client.getCno()%>"><%=client.getCname() %></a>
+   <a class="navbar-brand" href="/ssh_project/client/login.jsp" style="font-size: 18px;">注销</a>
+   <% }else{ 
+   
+   response.sendRedirect("/ssh_project/client/login.jsp");
+   
+   %>
+  <a class="navbar-brand" href="/ssh_project/client/login.jsp">注册/登录</a>
   <% } %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -41,14 +45,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/index.jsp">商城首页<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/ssh_project/index.jsp">商城首页<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">我的购物车</a>
+        <a class="nav-link" href="/ssh_project/user/seeshoppingcar?cno=<%=cno%>&value=buycar">购物车</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">我的订单</a>
+        <a class="nav-link" href="/ssh_project/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -65,7 +69,7 @@
 	<%  for(int i=0;i<blist.size();i++){ %>
 	<div style="margin-left: 10%;width: 1500px;height: 100px;" class="row">
 		<div class="card">
-			<img class="img-responseven" alt="sa" src="/ecommerce/image/<%=carphoto.get(i).getPname()%>">
+			<img class="img-responseven" alt="sa" src="/ssh_project/image/<%=carphoto.get(i).getPname()%>">
 		</div>
 		<div class="card w-50">
 
@@ -76,13 +80,13 @@
 			</h5>
 			<h6 class="text-secondary">
 			  &nbsp;&nbsp;送货地址:<%=blist.get(i).getAddress() %> &nbsp;&nbsp; &nbsp;&nbsp; 订单生成时间：<%=blist.get(i).getDate() %>
-			  <p align="right"><br><a class="text-danger" data-toggle="modal" data-target="#example<%=i %>" href="#">修改地址</a>|<a class="text-danger" href="/ecommerce/user/deletecarbuy?bno=<%=blist.get(i).getBno()%>">删除订单</a></p>
+			  <p align="right"><br><a class="text-danger" data-toggle="modal" data-target="#example<%=i %>" href="#">修改地址</a>|<a class="text-danger" href="/ssh_project/user/deletecarbuy?bno=<%=blist.get(i).getBno()%>">删除订单</a></p>
 			</h6>
 		</div>
 		<div class="card" style="width: 10rem;">
 			<br>
 			<h4 class="text-danger">&nbsp;&nbsp;待付:￥<%=blist.get(i).getPrice() %></h4>
-			<a class="btn btn-primary text-light" href="/ecommerce/user/getonebuy?bno=<%=blist.get(i).getBno()%>&pay=yes">去支付</a>
+			<a class="btn btn-primary text-light" href="/ssh_project/user/getonebuy?bno=<%=blist.get(i).getBno()%>&pay=yes">去支付</a>
 			</div>
 	</div><br><br>
 <div class="modal fade" id="example<%=i %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -94,7 +98,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="/ecommerce/user/updatecarbuy" method="post">
+      <form action="/ssh_project/user/updatecarbuy" method="post">
       		<input type="hidden" name="bno" value="<%=blist.get(i).getBno()%>">
       <div class="modal-body">
        		收货地址: (如：xx省xx市xx县xx小区)
