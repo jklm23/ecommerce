@@ -16,9 +16,9 @@
    	<!--数据源配置-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
-        <property name="jdbcUrl" value="jdbc:MySQL://localhost:3306/shopping?serverTimezone=UTC"/>
+        <property name="jdbcUrl" value="jdbc:MySQL://rm-m5e21o0b85qg136p6qo.mysql.rds.aliyuncs.com:3306/ecommerce?serverTimezone=UTC&amp;useSSL=true"/>
         <property name="user" value="root"/>
-        <property name="password" value="Shijiaxin"/>
+        <property name="password" value="Jklm2345"/>
         <property name="initialPoolSize" value="3"/>
         <property name="maxPoolSize" value="20"/>
         <property name="minPoolSize" value="1"/>
