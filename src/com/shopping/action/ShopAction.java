@@ -41,6 +41,9 @@ public class ShopAction extends ActionSupport{
 		private String oldsn;
 		private int sno;
 		private Shop shop;
+		private String shopKeyWords;
+
+
 		/**
 		 * 添加一条商品信息
 		 */
@@ -249,12 +252,15 @@ public class ShopAction extends ActionSupport{
 		 * 点击进入首页后先获取商品信息
 		 */
 		public String findindexshop() throws Exception{
-			list=shopService.getAll();
+			if(shopKeyWords==null)
+				list=shopService.getAll();
+			else
+				list=shopService.getAllBySname(shopKeyWords);
 			//Collections.reverse(list);
 			String s="findindex";
 			List<Shop> sList=new ArrayList<>();
 			for(Shop shop:list){
-				if(s.indexOf(shop.getShopname())<0){
+				if(s.indexOf(shop.getShopname())<0){//去重
 					sList.add(shop);
 					s+=shop.getShopname();
 				}
@@ -506,4 +512,11 @@ public class ShopAction extends ActionSupport{
 			this.oldsn = oldsn;
 		}
 		
+		public String getShopKeyWords() {
+			return shopKeyWords;
+		}
+
+		public void setShopKeyWords(String shopKeyWords) {
+			this.shopKeyWords = shopKeyWords;
+		}
 }

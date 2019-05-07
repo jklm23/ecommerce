@@ -27,11 +27,13 @@ input {
 </head>
 <body style="background-color: #F5FFFA">
 	<div class="container" style="margin-top: 10%; width: 450px;">
-	<!-- dsafsdfasfd -->
 		<form action="/ecommerce/user/clientlogin" method="post"
 			class="form-signin" role="form">
 			<h3 align="center">欢迎登录商城</h3>
-			<%
+			<%		
+			//清除session中的client
+			session.removeAttribute("client"); 
+			//
 				if (request.getAttribute("key") != null)
 					//获取登录返回信息并输出
 					out.print("<h4 class='text-danger'>" + request.getAttribute("key") + "</h4>");

@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<title>历史记录</title>
+<title>订单</title>
 <style type="text/css">
 	.img-responseven {
   			display: block;
@@ -31,7 +31,7 @@
    %>
    <a class="navbar-brand text-info" href="/ecommerce/user/findoneclient?cno=<%=client.getCno()%>"><%=client.getCname() %></a>
    <a class="navbar-brand" href="/ecommerce/client/login.jsp" style="font-size: 18px;">注销</a>
-   <% }else{ %>
+   <% }else{ response.sendRedirect("/ecommerce/client/login.jsp"); %>
   <a class="navbar-brand" href="/ecommerce/client/login.jsp">注册/登录</a>
   <% } %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,11 +44,11 @@
         <a class="nav-link" href="/ecommerce/index.jsp">商城首页<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">购物车</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">我的购物车</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">我的订单</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -96,8 +96,8 @@
         <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">我的订单</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="搜索商品" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" action="/ecommerce/user/findindexshop" method="get">
+      <input class="form-control mr-sm-2" type="search" placeholder="搜索商品" aria-label="Search" name="shopKeyWords" id="shopKeyWords">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查找商品</button>
     </form>
   </div>
@@ -137,7 +137,7 @@
                     </ul>
   				</li>
   				<li class="dropdown-submenu list-group-item">
-  					<a href="#">男鞋</a>
+  					<a href="#">男士鞋</a>
              		<ul class="dropdown-menu pull-right">
                   		<% for(String s:ml4){ %>
                   		<li class="list-group-item"><a href="/ecommerce/user/seeoneshop?shopname=<%=s %>"><%=s %></a></li>
@@ -145,7 +145,7 @@
                     </ul>
   				</li>
   				<li class="dropdown-submenu list-group-item">
-  					<a href="#">女鞋</a>
+  					<a href="#">女士鞋</a>
              		<ul class="dropdown-menu pull-right">
                   		<% for(String s:ml5){ %>
                   		<li class="list-group-item"><a href="/ecommerce/user/seeoneshop?shopname=<%=s %>"><%=s %></a></li>
@@ -155,6 +155,7 @@
   				<img style="height: 200px;" src="/ecommerce/image/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png" alt="商标">
 			</ul>
 		</div>
+		<!-- 滚动信息 -->
 		<div class="card w-75">
  			 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   				<div class="carousel-inner">
@@ -192,7 +193,7 @@
 	
  	<table style="margin-left: 70px;width: 1500px;">
  		<% List<Photo> plist=(List<Photo>)session.getAttribute("plist");
- 			System.out.print(plist.size());
+ 			//System.out.print(plist.size());
  		   for(int i=0;i<plist.size()/3;i++){ 
  		 %>
  		 <tr>

@@ -114,7 +114,7 @@ public class PhotoAction extends ActionSupport{
 			HttpServletRequest request=ServletActionContext.getRequest();
 			HttpSession session=request.getSession();
 			List<Photo> plist=new ArrayList<>();
-			List<Shop> slist=(List<Shop>)session.getAttribute("slist");
+			List<Shop> slist=(List<Shop>)session.getAttribute("slist");//从ShopAction获得
 			for(Shop shop:slist){
 				if(photoService.getAllByName(shop.getShopname()).size()!=0){
 				Photo photo =photoService.getAllByName(shop.getShopname()).get(0);
