@@ -22,13 +22,31 @@
 	}
 </style>
 </head>
+<!-- 密码输入校验 -->
+<script type="text/javascript">
+ function checkpwd(){
+  var p1=document.register.cpassword.value;//获取密码框的值
+  var p2=document.register.cpassword_check.value;//获取重新输入的密码值
+  
+  if(p1!=p2){//判断两次输入的值是否一致，不一致则显示错误信息
+   document.getElementById("msg").innerHTML="两次输入密码不一致，请重新输入";//在div显示错误信息
+   return false;
+  }else{
+	  document.getElementById("msg").innerHTML=""
+  }
+ }
+</script>
+
+
 <body style="background-color: #F5FFFA">
 	<div class="container" style="margin-top: 7%;width: 550px;">
-		<form action="/ecommerce/user/addclient" method="post" class="form-signin" role="form">
+		<form action="/ecommerce/user/addclient" method="post" class="form-signin" role="form" name="register">
 			<div class="alert alert-info" role="alert"><h3 align="center">新用户注册</h3></div>
 			<% if(request.getAttribute("key")!=null) out.print("<h4 class='text-danger'>"+request.getAttribute("key")+"</h4>");%>
 			<input type="text" class="form-control" placeholder="用户名" required autofocus name="cname">
 			<input type="password" class="form-control"  placeholder="用户密码" required name="cpassword">
+			<input type="password" class="form-control"  placeholder="确认密码" required name="cpassword_check" onchange="checkpwd()"> 
+			<h4 class='text-danger' id="msg"></h4>
 			<select class="form-control" name="csex">
 				<option value="男">男
 				<option value="女">女
