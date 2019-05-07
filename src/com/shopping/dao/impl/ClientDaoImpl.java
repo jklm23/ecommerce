@@ -111,4 +111,14 @@ public class ClientDaoImpl implements ClientDao{
 		return list;
 	}
 
+	
+	@Override
+	public Client check(String cname) {
+		Session session=sessionFactory.openSession();
+		String hql="from Client as c where c.cname = :cname";
+		Client client=(Client)session.createQuery(hql).setParameter("cname", cname).uniqueResult();
+		return client;
+	}
+	
+	
 }

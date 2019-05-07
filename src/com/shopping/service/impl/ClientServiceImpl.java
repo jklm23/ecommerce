@@ -7,9 +7,9 @@ import com.shopping.dao.ClientDao;
 import com.shopping.model.Client;
 import com.shopping.service.ClientService;
 
-public class ClientServiceImpl implements ClientService{
+public class ClientServiceImpl implements ClientService {
 	private ClientDao clientDao;
-	
+
 	public ClientDao getClientDao() {
 		return clientDao;
 	}
@@ -55,7 +55,7 @@ public class ClientServiceImpl implements ClientService{
 
 	@Override
 	public Client login(String cname, String password) {
-		EncryptionByMD5 eb=new EncryptionByMD5();
+		EncryptionByMD5 eb = new EncryptionByMD5();
 		return clientDao.login(cname, eb.getMD5(password.getBytes()));
 	}
 
@@ -64,4 +64,8 @@ public class ClientServiceImpl implements ClientService{
 		return clientDao.getAllByCno(cno);
 	}
 
+	@Override
+	public Client checkName(String cname) {
+		return clientDao.check(cname);
+	}
 }

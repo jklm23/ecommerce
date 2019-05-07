@@ -175,7 +175,10 @@
 	    <!-- 添加用户 -->
 	    <action name="addclient" class="clientAction" method="addclient">
 	    	<result name="success">
-	    		/index.jsp;
+	    		/client/addSuccess.jsp;
+	    	</result>
+	    	<result name="error">
+	    		/client/addclient.jsp;
 	    	</result>
 	    </action>
 	    

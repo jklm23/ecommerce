@@ -49,4 +49,6 @@ public interface ClientDao {
 	 * 根据cname,cpassword判断是否登录
 	 */
 	public Client login(String cname,String password);
+
+	public Client check(String cname);
 }

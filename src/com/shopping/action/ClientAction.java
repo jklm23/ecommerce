@@ -87,11 +87,15 @@ public class ClientAction extends ActionSupport {
 	 * 添加一条用户记录
 	 */
 	public String addclient() throws Exception {
-		EncryptionByMD5 eb=new EncryptionByMD5();
+		EncryptionByMD5 eb = new EncryptionByMD5();
+		if(clientService.checkName(cname)!=null) {
+			this.setKey("用户已被注册");
+			return "error";
+		}
 		Client client = new Client();
 		client.setCname(cname);
 		client.setCpassword(eb.getMD5(cpassword.getBytes()));
-		System.out.println("**************"+eb.getMD5(cpassword.getBytes()));
+
 		client.setCclass("用户");
 		client.setCage(cage);
 		client.setCsex(csex);
@@ -104,7 +108,7 @@ public class ClientAction extends ActionSupport {
 			return SUCCESS;
 		else {
 			return ERROR;
-			
+
 		}
 	}
 

@@ -66,4 +66,6 @@ public interface ClientService {
 	 */
 	public Client login(String cname,String password);
 
+	public Client checkName(String cname);
+
 }
