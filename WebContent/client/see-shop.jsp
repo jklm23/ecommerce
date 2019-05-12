@@ -136,7 +136,7 @@
 				<% } %>
 			 </select>
 		</td></tr><tr><td>
-		购买数量: <input type="text" name="num" value="1" style="border:none;" >
+		购买数量: <input type="text" name="num" value="1" style="border:none;" onkeyup="value=value.replace(/[^(\d)]/g,'')">
 		</td></tr><tr><td>
 		<% if(cno==0){
 		%>
