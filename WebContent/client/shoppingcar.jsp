@@ -48,17 +48,13 @@
         <a class="nav-link" href="/ecommerce/index.jsp">商城首页<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">购物车</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=buycar">我的购物车</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
+        <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">我的订单</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="搜索商品" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查找商品</button>
-    </form>
   </div>
 </nav>
 
@@ -86,7 +82,7 @@
 		<div class="card" style="width: 10rem;">
 			<br>
 			<h4 class="text-danger">&nbsp;&nbsp;待付:￥<%=blist.get(i).getPrice() %></h4>
-			<a class="btn btn-primary text-light" href="/ecommerce/user/getonebuy?bno=<%=blist.get(i).getBno()%>&pay=yes">去支付</a>
+			<a class="btn btn-primary text-light" href="/ecommerce/user/getonebuy?bno=<%=blist.get(i).getBno()%>&pay=yes">立即付款</a>
 			</div>
 	</div><br><br>
 <div class="modal fade" id="example<%=i %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

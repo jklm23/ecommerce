@@ -126,6 +126,9 @@
 		</td></tr><tr><td>
 		<h5 class="text-secondary">商品类型: <%=s.getShopclass()%>  <%=s.getSclass() %></h5>
 		</td></tr><tr><td>
+		</td></tr><tr><td>
+		<h5 class="text-secondary">库存:  <input type="text" name="num2" value="<%=s.getCount() %>" style="border:none;" disabled="disabled"></h5>
+		</td></tr><tr><td>
 		<h5>尺码:</h5>
 			 <select name="size" class="form-control">
 				<% for(Shop shop:shoplist) {%>
@@ -137,7 +140,7 @@
 		</td></tr><tr><td>
 		<% if(cno==0){
 		%>
-		<h3 class="text-danger">购买请登录</h3><% }else{ %>
+		<h3 class="text-danger">购买请登录</h3><% }else if(s.getCount()==0)%><h3 class="text-danger">库存不足</h3><%else{ %>
 		<button class="btn btn-danger" onclick="doAction('/ecommerce/user/addshoppingcar')">添加到购物车</button>&nbsp;
 		<button class="btn btn-primary" onclick="doAction('/ecommerce/user/paybuy')">支付</button>
 		<% } %>

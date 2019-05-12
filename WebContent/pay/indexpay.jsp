@@ -42,10 +42,6 @@
         <a class="nav-link" href="/ecommerce/user/seeshoppingcar?cno=<%=cno%>&value=history">历史记录</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="搜索商品" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">查找商品</button>
-    </form>
   </div>
 </nav>
 

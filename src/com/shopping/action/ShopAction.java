@@ -86,7 +86,7 @@ public class ShopAction extends ActionSupport{
 			HttpSession session=request.getSession();
 			session.setAttribute("shopname",shopname); 
 			String sn=shopname;
-			System.out.println("测试"+sn);
+			//System.out.println("测试"+sn);
 			this.setList(shopService.getAllBySname(sn));
 			Collections.reverse(this.getList());
 			session.setAttribute("shoplist",this.getList());

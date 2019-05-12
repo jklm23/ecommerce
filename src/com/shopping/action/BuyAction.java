@@ -124,7 +124,7 @@ public class BuyAction extends ActionSupport{
 		}
 		
 		/**
-		 * 点击支付，生成一条订单，然后到支付去
+		 * 点击支付，生成一条订单，然后支付
 		 * @return
 		 * @throws Exception
 		 */
@@ -174,11 +174,11 @@ public class BuyAction extends ActionSupport{
 		 * @throws Exception
 		 */
 		public String seeshoppingcar() throws Exception{
-			System.out.println(value);
+			//System.out.println(value);
 			list=buyService.getAllByCno(cno);
 			List<Buy> blist=new ArrayList<>();
 			ActionContext act=ActionContext.getContext();
-			if(value.equals("history")){
+			if(value.equals("history")){//查看订单
 				for(Buy buy:list){
 					if(buy.getBuystate().equals("已支付"))
 						blist.add(buy);
