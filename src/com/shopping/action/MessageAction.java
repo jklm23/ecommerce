@@ -91,30 +91,30 @@ public class MessageAction extends ActionSupport{
 		 * @return
 		 * @throws Exception
 		 */
-		public String updatelist() throws Exception{
-				Message m1=messageService.get("热门商品");
-				m1.setMessage(one);
-				messageService.update(m1);
-				Message m2=messageService.get("名牌");
-				m2.setMessage(two);
-				messageService.update(m2);
-				Message m3=messageService.get("鞋类");
-				m3.setMessage(three);
-				messageService.update(m3);
-				Message m4=messageService.get("男鞋");
-				m4.setMessage(four);
-				messageService.update(m4);
-				Message m5=messageService.get("女鞋");
-				m5.setMessage(five);
-				messageService.update(m5);
-				ActionContext act=ActionContext.getContext();
-				act.getSession().put("one", m1);
-				act.getSession().put("two", m2);
-				act.getSession().put("three", m3);
-				act.getSession().put("four", m4);
-				act.getSession().put("five", m5);
-				return SUCCESS;
-		}
+//		public String updatelist() throws Exception{
+//				Message m1=messageService.get("热门商品");
+//				m1.setMessage(one);
+//				messageService.update(m1);
+//				Message m2=messageService.get("名牌");
+//				m2.setMessage(two);
+//				messageService.update(m2);
+//				Message m3=messageService.get("鞋类");
+//				m3.setMessage(three);
+//				messageService.update(m3);
+//				Message m4=messageService.get("男鞋");
+//				m4.setMessage(four);
+//				messageService.update(m4);
+//				Message m5=messageService.get("女鞋");
+//				m5.setMessage(five);
+//				messageService.update(m5);
+//				ActionContext act=ActionContext.getContext();
+//				act.getSession().put("one", m1);
+//				act.getSession().put("two", m2);
+//				act.getSession().put("three", m3);
+//				act.getSession().put("four", m4);
+//				act.getSession().put("five", m5);
+//				return SUCCESS;
+//		}
 		/**
 		 * 管理员点击编辑列表后，获取之前的数据
 		 * @return
