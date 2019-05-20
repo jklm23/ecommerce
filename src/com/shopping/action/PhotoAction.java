@@ -29,46 +29,46 @@ public class PhotoAction extends ActionSupport{
 		/**
 		 * 上传一件商品的一张或多张图片	
 		 */
-//		public String execute() throws Exception {
-//				if(shopname.equals("首页")){
-//					list=photoService.getAllByName(shopname);
-//					for(Photo photo:list){
-//						photoService.deleteById(photo.getPno());
-//						File file=new File(imagepath+photo.getPname());
-//						boolean a=file.delete();
-//					}
-//				}
-//				String path=ServletActionContext.getServletContext().getRealPath("/upload");
-//				if(upload!=null){
-//					File saveDir=new File(path);
-//					if(!saveDir.exists()){
-//						saveDir.mkdirs();
-//					}
-//					for(int i=0;i<uploadFileName.length;i++){
-//						try {
-//							Date date=new Date();
-//							Photo photo=new Photo();
-//							long d=date.getTime();
-//							String name=String.valueOf(d);
-//							//文件类型
-//							String hString=uploadFileName[i].substring(uploadFileName[i].indexOf("."));
-//							photo.setShopname(shopname);
-//							photo.setPname(name+hString);
-//							photoService.save(photo);	
-//							System.out.println(path+" "+photo);
-//							File saveFile=new File(imagepath,name+hString);
-//							FileUtils.copyFile(upload[i],saveFile);
-//						} catch (Exception e) {
-//							e.printStackTrace();
-//						}
-//					}
-//
-//				}
-//					if(shopname.equals("首页"))
-//						return "setindex";
-//					else
-//						return SUCCESS;
-//				}
+		public String execute() throws Exception {
+				if(shopname.equals("首页")){
+					list=photoService.getAllByName(shopname);
+					for(Photo photo:list){
+						photoService.deleteById(photo.getPno());
+						File file=new File(imagepath+photo.getPname());
+						boolean a=file.delete();
+					}
+				}
+				String path=ServletActionContext.getServletContext().getRealPath("/upload");
+				if(upload!=null){
+					File saveDir=new File(path);
+					if(!saveDir.exists()){
+						saveDir.mkdirs();
+					}
+					for(int i=0;i<uploadFileName.length;i++){
+						try {
+							Date date=new Date();
+							Photo photo=new Photo();
+							long d=date.getTime();
+							String name=String.valueOf(d);
+							//文件类型
+							String hString=uploadFileName[i].substring(uploadFileName[i].indexOf("."));
+							photo.setShopname(shopname);
+							photo.setPname(name+hString);
+							photoService.save(photo);	
+							System.out.println(path+" "+photo);
+							File saveFile=new File(imagepath,name+hString);
+							FileUtils.copyFile(upload[i],saveFile);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+
+				}
+					if(shopname.equals("首页"))
+						return "setindex";
+					else
+						return SUCCESS;
+				}
 		/**
 		 * 查询一条图片信息
 		 * @return
