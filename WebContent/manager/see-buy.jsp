@@ -13,21 +13,6 @@
 <title>管理订单</title>
 </head>
 <body>
-	<nav class="navbar navbar-light bg-light">
-  		<a class="navbar-brand">查询栏</a>
-  	  <form class="form-inline" action="/ecommerce/user/searchbuy" method="post">
-  	  	<select name="key" class="form-control">
-    		<option value="所有订单">所有订单</option>
-    		<option value="订单编号">订单编号</option>
-  	  		<option value="用户编号">用户编号</option>
-  	  		<option value="商品编号">商品编号</option>
-  	  		<option value="购买状态">购买状态</option>
-  	  		<option value="出货状态">出货状态</option>
-  	  	</select>
-    	<input  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="value">
-    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  	  </form>
-	</nav>
 	<table class="table">
 		<thead>
 			<th>订单编号</th><th>用户编号</th><th>商品编号</th><th>购买数量</th>

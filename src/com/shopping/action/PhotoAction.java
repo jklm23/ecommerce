@@ -25,7 +25,7 @@ public class PhotoAction extends ActionSupport{
 		private String shopname;//商品名
 		private String pname;//图片名
 		private List<Photo> list;
-		private String imagepath="E:\\java-workbench\\ruanjiangongcheng\\ecommerce\\WebContentimage";
+		private String imagepath="E:\\java-workbench\\ruanjiangongcheng\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\ecommerce\\image";
 		/**
 		 * 上传一件商品的一张或多张图片	
 		 */
@@ -55,7 +55,7 @@ public class PhotoAction extends ActionSupport{
 							photo.setShopname(shopname);
 							photo.setPname(name+hString);
 							photoService.save(photo);	
-							System.out.println(path+" "+photo);
+							////System.out.println(path+" "+photo);
 							File saveFile=new File(imagepath,name+hString);
 							FileUtils.copyFile(upload[i],saveFile);
 						} catch (Exception e) {
@@ -80,7 +80,7 @@ public class PhotoAction extends ActionSupport{
 			HttpSession session=request.getSession();
 			String sn=(String)session.getAttribute("shopname");
 			list=photoService.getAllByName(sn);
-			System.out.println(list);
+			////System.out.println(list);
 			session.setAttribute("photolist", list);
 			return "success";
 		}
@@ -98,7 +98,7 @@ public class PhotoAction extends ActionSupport{
 			for(Photo photo:list){
 				File file=new File(imagepath+photo.getPname());
 				boolean a=file.delete();
-				System.out.println(a+" "+request.getContextPath()+"/image/"+photo.getPname());
+				//System.out.println(a+" "+request.getContextPath()+"/image/"+photo.getPname());
 				photoService.deleteById(photo.getPno());
 			}
 			return "next";
@@ -116,12 +116,13 @@ public class PhotoAction extends ActionSupport{
 			List<Photo> plist=new ArrayList<>();
 			List<Shop> slist=(List<Shop>)session.getAttribute("slist");//从ShopAction获得
 			for(Shop shop:slist){
+				//System.out.println("*****+"+shop.getShopname());
 				if(photoService.getAllByName(shop.getShopname()).size()!=0){
 				Photo photo =photoService.getAllByName(shop.getShopname()).get(0);
 				plist.add(photo);
 				}
 			}
-			System.out.println(plist);
+			////System.out.println(plist);
 			session.setAttribute("list", list);
 			session.setAttribute("plist", plist);
 			return SUCCESS;
@@ -156,7 +157,7 @@ public class PhotoAction extends ActionSupport{
 						photo.setShopname(shopname);
 						photo.setPname(name+hString);
 						photoService.save(photo);	
-						System.out.println(path+" "+photo);
+						//System.out.println(path+" "+photo);
 						File saveFile=new File(imagepath,name+hString);
 						FileUtils.copyFile(upload[i],saveFile);
 					} catch (Exception e) {
@@ -200,7 +201,7 @@ public class PhotoAction extends ActionSupport{
 			List<Shop> shopl=(List<Shop>)session.getAttribute("shopl");
 			List<Photo> carphoto=new ArrayList<>();
 			for(Shop shop:shopl){
-				System.out.println("kan "+photoService.getAllByName(shop.getShopname()).size());
+				//System.out.println("kan "+photoService.getAllByName(shop.getShopname()).size());
 				if(photoService.getAllByName(shop.getShopname()).size()>0){
 					Photo pb=photoService.getAllByName(shop.getShopname()).get(0);
 					carphoto.add(pb);
@@ -208,7 +209,7 @@ public class PhotoAction extends ActionSupport{
 			}
 			session.setAttribute("carphoto",carphoto);
 			String value=(String)session.getAttribute("value");
-			System.out.println(value);
+			//System.out.println(value);
 			if(value.equals("history"))
 				return "history";
 			else

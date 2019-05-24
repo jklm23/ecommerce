@@ -13,22 +13,6 @@
 <title>管理商品</title>
 </head>
 <body>
-	<nav class="navbar navbar-light bg-light">
-  		<a class="navbar-brand">查询栏</a>
-  	  <form class="form-inline" action="/ecommerce/user/searchshop" method="post">
-  	  	<select name="key" class="form-control">
-  	  		<option value="所有商品">所有商品</option>
-  	  		<option value="品牌名">品牌名</option>
-  	  		<option value="商品名">商品名</option>
-  	  		<option value="商品种类">商品种类</option>
-  	  		<option value="用户类型">用户类型</option>
-  	  		<option value="尺码">尺码</option>
-  	  		<option value="商品编号">商品编号</option>
-  	  	</select>
-    	<input  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="value">
-    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  	  </form>
-	</nav>
 	<table class="table">
 		<thead>
 			<th>商品编号</th><th>品牌名</th><th>商品名</th><th>商品类型</th><th>用户类型</th>

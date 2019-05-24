@@ -241,6 +241,24 @@
  		 </tr>
  		 <tr><td colspan="3">·</td></tr>
  		<% } %>
+ 	<tr><%for(int i=0;i<plist.size()%3;i++){
+ 		System.out.println("*******************"+plist.get(plist.size()-plist.size()%3+i).getPname());
+ 		System.out.println(plist.size());
+ 		%>
+ 		<td>
+ 		 	<div class="card" style="width: 400px;border: 0">
+				<div class="card" style="width: 400px;">
+					<a href="user/seeoneshop?shopname=<%=plist.get(plist.size()-plist.size()%3+i).getShopname() %>">
+  					<img class="img-responseven w-100" src="/ecommerce/image/<%=plist.get(plist.size()-plist.size()%3+i).getPname() %>" alt="暂无图片">
+  					</a>
+  					<div class="card-body">
+    				<h3 align="center"><a href="user/seeoneshop?shopname=<%=plist.get(i*3).getShopname() %>"><%=plist.get(plist.size()-plist.size()%3+i).getShopname() %></a></h3>
+  					<h5 class="text-danger" align="center">￥<%=slist.get(i*3).getPrice()%></h5>
+  					</div>
+				</div>
+			</div>
+ 		 	</td>
+ 		 	<%} %>
  	</table>
  
  

@@ -261,6 +261,7 @@ public class ShopAction extends ActionSupport{
 			List<Shop> sList=new ArrayList<>();
 			for(Shop shop:list){
 				if(s.indexOf(shop.getShopname())<0){//去重
+					System.out.println("*******"+shop.getShopname());
 					sList.add(shop);
 					s+=shop.getShopname();
 				}

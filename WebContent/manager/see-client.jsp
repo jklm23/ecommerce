@@ -13,19 +13,6 @@
 <title>管理用户</title>
 </head>
 <body>
-	<nav class="navbar navbar-light bg-light">
-  		<a class="navbar-brand">查询栏</a>
-  	  <form class="form-inline" action="/ecommerce/user/searchclient" method="post">
-  	  	<select name="key" class="form-control">
-    		<option value="所有用户">所有用户</option>
-  	  		<option value="用户名">用户名</option>
-  	  		<option value="性别">性别</option>
-  	  		<option value="用户编号">用户编号</option>
-  	  	</select>
-    	<input  class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="value">
-    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  	  </form>
-	</nav>
 	<table class="table">
 		<thead>
 			<th>用户编号</th><th>用户名</th><th>用户密码</th>
